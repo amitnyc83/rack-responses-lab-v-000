@@ -6,8 +6,8 @@ class Application
   def call(env)
     resp = Rack::Response.new
     current = Time.new
-# binding.pry
-    if  13 < current.hour
+ binding.pry
+    if current.hour >= 12
       resp.write "Good Afternoon"
     else
       resp.write "Good Morning"
